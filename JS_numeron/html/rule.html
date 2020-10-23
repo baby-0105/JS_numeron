@@ -1,0 +1,43 @@
+<head>
+  <meta charset="utf-8" />
+  <title>JS_numeron_rule</title>
+  <meta name="description" content="JS_numeron_TOP" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <h1 class="rule-title">【ルール】</h1>
+  <div class="rule-text-wrap">
+    <h2>「隠れた3桁の数字を当てればゲームクリア」</h2>
+    <p>3桁の数字で選ばれる、「3つの数字」は0~9の中の異なる数字。</p>
+    <p>例）094、とか、184</p>
+    <p class="rule-arrow">⬇️</p>
+    <p>プレイヤーは、1ターンずつ数字を選んでいく。</p>
+    <img src="../img/my_num.png">
+    <p class="rule-arrow">⬇️</p>
+    <p>例えば、隠された数字が「123」、そして、あなたの選んだ数字が「921」だったとする。</p>
+    <p>この場合、「1EAT 1BITE」と結果が返ってきます。</p>
+    <img src="../img/1eat1bite.png">
+    <p class="rule-arrow">⬇️</p>
+    <p>EAT：「場所も、数字も合っているものが存在します」の意味 （例の場合は、「2」）</p>
+    <p>BITE：「数字は合っているが、場所が違います」の意味 （例の場合は、「1」）</p>
+    <p>「1EAT 1BITE」返ってきた結果を元に何度も数字を当てるターンを繰り返して、隠された数字を当てます</p>
+    <p class="rule-arrow">⬇️</p>
+    <p>では、練習。</p>
+    <p>隠された数字が「123」。選んだ数字が「305」の場合は・・・</p>
+    <p class="rule-arrow">⬇️</p>
+    <p>そうです。</p>
+    <p>0EAT 1BITEと結果が返ってきます。</p>
+    <p class="rule-arrow">⬇️</p>
+    <p>3EAT 0BITEと結果が返ってくる。つまり、隠された数字を当てればゲームクリアです。</p>
+    <img src="../img/3eat0bite.png">
+    <img src="../img/alert.png">
+    <p>では早速始めてみましょう。</p>
+  </div>
+  <div class="rule-button-wrap">
+    <a class="rule-home" href="home.html">ホームに戻る</a>
+    <a class="rule-start" href="numeron.html">はじめる。</a>
+  </div>
+
+  <script src="../js/numeron.js"></script>
+</body>

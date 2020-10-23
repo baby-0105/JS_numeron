@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #38383E;
+  color: white;
+  text-decoration: none;
+}
+
+input {
+  color: #38383E;
+  background-color: white;
+  font-size: 50px;
+  margin-top: 30px;
+}
+
+.numeron-form {
+  text-align: center;
+}
+
+.home-rule,
+.home-start,
+.rule-home,
+.rule-start,
+.numeron-home,
+.numeron-rule {
+  background-color: white;
+  color: #38383E;
+  padding: 10px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: red;
+    transition: 0.5s;
+  }
+}
+
+.home-title {
+  font-size: 150px;
+  text-align: center;
+}
+
+.rule-title {
+  font-size: 50px;
+  text-align: center;
+  margin: 100px 0 100px;
+}
+
+.home-button-wrap,
+.rule-button-wrap {
+  text-align: center;
+  margin: 100px 0 200px;
+}
+
+.three_number_wrap {
+  padding: 50px;
+}
+
+.number_wrap {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+.rival_num,
+.my_num {
+  border: solid 1px white;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.eatBite_wrap {
+  border-bottom: solid 1px white;
+  height: 200px;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.rule-text-wrap {
+  text-align: center;
+}
+
+.rule-text-wrap p,
+.rule-text-wrap img {
+  margin-bottom: 20px;
+}
+
+.rule-arrow {
+  font-size: 100px;
+}

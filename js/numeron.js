@@ -2,12 +2,12 @@
   'use strict';
 
   // ランダムな三桁の数字
-  let makeRivalNumArray = (function() {
+  var makeRivalNumArray = (function() { // ※safari、iOSでは、letでReferenceError→そのため、var
     let rivalNumArray = [];
 
     return function() {
       //　配列の長さが3になるまで繰り返す。
-      for (let i = 0; rivalNumArray.length < 3; i++) {
+      for (let i=0; rivalNumArray.length < 3; i++) {
         const randNum = Math.floor(Math.random() * 10) // 0~9までのランダムな整数
 
         if(!rivalNumArray.includes(randNum)){ // 一度出た数字がなければ、配列に数字を足す
@@ -19,8 +19,8 @@
     }
   })();
 
-  let rivalNumText = makeRivalNumArray().join('');
-  // console.log(rivalNumText);
+  var rivalNumText = makeRivalNumArray().join('');
+  // console.log(makeRivalNumArray());
 
   // eat（場所も数字も同じ数）
   function eat(myNumArray) { // eatは変化する値なので、const × → let
@@ -50,9 +50,9 @@
 
   // その時々の結果の描画
   function writeResultText(myNum, myNumArray, gameNum) { // 引数の順番は大事！
-    const result_block   = document.getElementById('result_block'),
-          eatBite        = document.getElementById('eat_bite'),
-          li             = document.createElement('li');
+    const result_block = document.getElementById('result_block'),
+          eat_bite      = document.getElementById('eat_bite'),
+          li           = document.createElement('li');
 
     let writeEatNum     = eat(myNumArray),
         writeBiteNum    = bite(myNumArray),
@@ -61,7 +61,7 @@
     li.textContent = `${gameNum}回目：${myNum} → ${writeEatBiteNum}`;
     result_block.appendChild(li);
 
-    eatBite.textContent = writeEatBiteNum; // ?eat ?bite 描画（main）
+    eat_bite.textContent = writeEatBiteNum; // ?eat ?bite 描画（main）
   }
 
   // 数字が重複していないかのチェック
@@ -110,7 +110,12 @@
     }
   })();
 
-  document.getElementById('numeron_btn').addEventListener('click', function() {
+  document.getElementById('numeron_btn').onclick = function() {
     btnClick();
-  });
+  };
+
+  // これも同様に動作する
+  // document.getElementById('numeron_btn').addEventListener('click', function() {
+  //   btnClick();
+  // });
 }

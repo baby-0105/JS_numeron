@@ -18,6 +18,10 @@ input {
   text-align: center;
 }
 
+#numeron_btn {
+  cursor: pointer;
+}
+
 .home-rule,
 .home-start,
 .rule-home,

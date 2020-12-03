@@ -51,7 +51,7 @@
   // その時々の結果の描画
   function writeResultText(myNum, myNumArray, gameNum) { // 引数の順番は大事！
     const result_block = document.getElementById('result_block'),
-          eat_bite      = document.getElementById('eat_bite'),
+          eat_bite     = document.getElementById('eat_bite'),
           li           = document.createElement('li');
 
     let writeEatNum     = eat(myNumArray),
